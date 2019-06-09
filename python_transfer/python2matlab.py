@@ -7,3 +7,7 @@ def matlabsolver():
     # get the data, shape and indices
     vsp1 = eng.solver()
     return vsp1
+def matlabsolver2():
+    eng = matlab.engine.start_matlab()
+    x = eng.solver1()
+    return x
