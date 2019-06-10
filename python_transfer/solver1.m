@@ -8,5 +8,6 @@ i3 = I(:,3);
 M = sparse(i1, i2, i3, max(i1), max(i2));
 x = (M'*M)\(M'*C);
 
+
 fprintf('Solved!\n');
 end

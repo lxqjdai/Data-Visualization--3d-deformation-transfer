@@ -10,5 +10,5 @@ def build_adjacency(fs):  #需要确认
             temp=np.array([i]*len(idx[0]))
             if np.sum(idx!=temp):
                 Adj_idx[i,j]=idx[0][np.nonzero(((idx!=temp)+0)[0])]+1
-    Parallel(n_jobs=1000,require='sharedmem')(delayed(Adj)(i) for i in range(len(fs)))
+    Parallel(n_jobs=6,require='sharedmem')(delayed(Adj)(i) for i in range(len(fs)))
     return Adj_idx
